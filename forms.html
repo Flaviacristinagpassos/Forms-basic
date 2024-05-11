@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Formulario</title>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #titulo{
+        font-family: monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #000000;
+        margin-left: 4%;
+    }
+    
+    #subtitulo {
+        font-family: monospace, lucida sans;
+        color: #000000;
+        margin-left: 15%;
+    }
+    
+    fieldset{
+        border: 0;
+    }
+    
+    body{
+        background: url("114948.jpg") no-repeat;
+        font-family: monospace, monaco;
+        font-size: 1.1em;
+        color: #191936;
+        margin-left: 36%;
+        margin-top: 2%;
+        justify-content: center;
+    }
+    
+    input, select, textarea, button{
+        border-radius: 6px;
+    }
+    
+    .campo{
+        margin-bottom:1.4em;
+    }
+    
+    .campo label{
+        margin-bottom: 0.6em;
+        color: #191936;
+        display: block;
+    }
+    
+    fieldset.grupo .campo{
+        float: left;
+        margin-right: 2em;
+    }
+    
+    .campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+        padding: 0.4em;
+        border: 2px solid #000000;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.5)
+        display: block;
+    }
+    
+    .campo select option{
+        padding-right: 0em;
+    }
+    
+    .campo input:focus, .campo select:focus, .campo textarea:focus (
+        background: #000000;
+    )
+    
+    .botao{
+        font-size: 2%;
+        background: #000000;
+        border: 15%;
+        margin-bottom: 5em;
+        color: #000000;;
+        padding: 0.2em 0.6em;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+        text: 2px 2px 2px rgba(0,0,0,0.2);
+        position: absolute;
+        top: 500%;
+        left: 80%;
+        margin-right: -80%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .botao:hover{
+        font-family: monospace, monaco;
+        background: #4a1bda;
+        box-shadow: insert 1px 1px 1px rgba(59, 6, 119, 0.1);
+        text-shadow: none;
+    }
+    
+    #check {
+        display:inline-block;
+    }
+
+    form{
+        border: 2px solid #3f00eb;
+        backdrop-filter: blur(250px);
+        background: #6b4bca;
+        padding: 20px 20px;
+        border-radius: 10px;
+        max-width: 550px;
+        margin: 4 auto;
+    }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+   <div>
+        <h1 id="titulo"> <strong>Sistemas pra Internet II</strong></h1>
+        <br>
+        <p id="subtitulo">Preencha Seus Dados</p>
+        <br><br>
+   </div> 
+    
+   <form>
+        <fieldset class="grupo">
+            <div>
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required>
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+                <br>
+                <br>
+            </div>
+        </fieldset>
+
+        <fieldset> 
+            <div class="grupo">
+                <label for="email"><strong>E-mail</strong></label>
+                <input type="email" name="email" id="email" required>
+                <label for="CPF"><strong>CPF</strong></label>
+                <input type="text" name="CPF" id="CPF" required>
+                <br>
+            </div>
+        </fieldset>
+
+
+        <div class="campo">
+            <br><br>
+            <label for="De qual Estado você é?"><strong>De qual Estado você é?</strong></label>
+            <select id="De qual Estado você é">
+                <option selected disabled value="">Selecione</option>
+                <option>AC</option>
+                <option>AL</option>
+                <option>AP</option>
+                <option>AM</option>
+                <option>BA</option>
+                <option>CE</option>
+                <option>DF</option>
+                <option>ES</option>
+                <option>GO</option>
+                <option>MA</option>
+                <option>MT</option>
+                <option>MS</option>
+                <option>MG</option>
+                <option>PA</option>
+                <option>PB</option>
+                <option>PR</option>
+                <option>PE</option>
+                <option>PI</option>
+                <option>RJ</option>
+                <option>RN</option>
+                <option>RS</option>
+                <option>RO</option>
+                <option>RR</option>
+                <option>SC</option>
+                <option>SP</option>
+                <option>SE</option>
+                <option>TO</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <br>
+            <label><strong>Em que área da aplicação você trabalha?</strong></label><br>
+            <label>
+                <input type="radio" name="devweb" value="Frontend" checked> Frontend
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="Backend"> Backend
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="Fullstack"> Fullstack
+            </label>
+        </div>
+
+        <fieldset class="grupo">
+            <div id="check">
+                <br>
+                <label><strong>Indique as Tecnologias você utiliza</strong></label><br><br>
+                <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+                <label for="tecnologia1">HTML/CSS </label>
+                
+                <input type="checkbox" id="tecnologia2 name="tecnologia2" value="Js">
+                <label for="tecnologia2">Js </label>
+
+                <input type="checkbox" id="tecnologia3" name="tecnologia3" value="PHP">
+                <label for="tecnologia3">PHP </label>
+
+                <input type="checkbox" id="tecnologia4" name="tecnologia4" value="Python">
+                <label for="tecnologia4">Python </label>
+
+                <input type="checkbox" id="tecnologia5" name="tecnologia5" value="Java">
+                <label for="tecnologia5">Java </label>
+
+                <input type="checkbox" id="tecnologia6" name="tecnologia6" value="C#">
+                <label for="tecnologia6">C# </label>
+                
+                <input type="checkbox" id="tecnologia7" name="tecnologia7" value="C++">
+                <label for="tecnologia7">C++ </label>
+                <br><br>
+                
+                <input type="checkbox" id="tecnologia8" name="tecnologia8" value="Swift">
+                <label for="tecnologia8">Swift </label>
+
+                <input type="checkbox" id="tecnologia9" name="tecnologia9" value="Kotlin">
+                <label for="tecnologia9">Kotlin </label>
+
+                <input type="checkbox" id="tecnologia10" name="tecnologia10" value="Ruby">
+                <label for="tecnologia10">Ruby </label>
+
+                <input type="checkbox" id="outro" name="Outros" value="Outros">
+                <label for="outro">Outros </label>
+            </div>
+        </fieldset>
+
+        <div>
+            <br><br>
+            <label><strong>Fale sobre sua trajetória profissional</strong></label>
+            <br><br>
+            <textarea row="10" style="width: 20em;" id="profissional" name="profissional"></textarea>
+            <br><br>
+        </div>
+
+        <button class="botao" type="submit"><strong>Enviar</strong></button>
+
+    </form>
+
+    <script>
+        const cpfInput = document.querySelector('#CPF');
+ 
+        cpfInput.addEventListener('input', () => {
+            let cpf = cpfInput.value;  
+            cpf = cpf.replace(/\D/g, ''); // Remove todos os caracteres que não são números
+            cpf = cpf.slice(0,11);
+            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o ponto após os primeiros 3 dígitos
+            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o ponto após os segundos 3 dígitos
+            cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o traço após os 3 últimos dígitos
+            cpfInput.value = cpf;
+        });
+    </script>
+</body>
+</html>
